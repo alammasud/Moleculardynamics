@@ -1,0 +1,26 @@
+input file has the following format
+500 //number of steps
+6 //number of duplicate along x
+6 //number of duplicate along y
+6 //number of duplicate along z
+4 //number of atom in unit cell
+4.086e-10 //lattice parameter
+1.7909e-25 //mass of one atom
+300.0 //temperature
+1e-15//time step 
+3.13e-10 //force cutoff
+5.2118e-20 //potential depth
+1.3535e10 //potential expotnetials sclaing paramter alpha
+50 //save strcutre after this many steps
+//this code implement NVE ensmeble using Morse  potentials for FCC Ag
+as refererenced in Phy.ReV B 157(3),1967
+to run the code
+type
+..............
+make clean
+make all
+./main
+............
+two files will be created 
+1) datates.txt -> save the strcutre in lammps dump file format
+2) energy.txt ->save energy , first column time step, second column potentials energy, third column kinetic energy, fourth column total energy

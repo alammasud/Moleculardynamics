@@ -1,0 +1,27 @@
+input file has the following format
+500 //number of steps
+6 //number of duplicate along x
+6 //number of duplicate along y
+6 //number of duplicate along z
+4 //number of atom in unit cell
+3.6e-10 //lattice parameter
+105.5206e-27 //mass of one atom
+300.0 //temperature
+1e-15//time step 
+2.5487e-10 //force cutoff
+3401.1 //epsilon
+50 //output will be save every 50 time step
+5 //m value 
+8 //n value
+//this code implement NVE ensmeble using m-n Lennard Jones potentials for FCC Cu
+as refererenced in Phys.Stat.Sold (a) 78,595 (1983)
+to run the code
+type
+..............
+make clean
+make all
+./main
+............
+two files will be created 
+1) datates.txt -> save the strcutre in lammps dump file format
+2) energy.txt ->save energy , first column time step, second column potentials energy, third column kinetic energy, fourth column total energy
